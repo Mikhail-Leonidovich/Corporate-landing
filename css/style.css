@@ -1,7 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 body {
@@ -13,7 +17,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1160px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -26,6 +31,12 @@ h6,
 p {
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+  color: #717171;
+}
+
 /* =================
         header
 ================== */
@@ -397,41 +408,37 @@ p {
   margin-top: 10px;
 }
 
-/* .contacts__arrow {
-  text-align: right;
-  padding: 35px 40px 0 0;
-  color: #fff;
-}
-
-.contacts__arrow::before {
-  content: url("/images/contacts/ARROW.png");
-  position: relative;
-  top: 30px;
-  left: 20px;
-} */
-
 .contacts__form {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 95px;
 }
 
-input {
+.form__name,
+.form__email,
+.form__password {
   border: 1px solid #999cb4;
   border-radius: 3px;
   height: 50px;
-  width: 265px;
+  width: 260px;
   background-color: #464c77;
   padding-left: 30px;
   color: #fff;
   outline: none;
 }
 
-::placeholder {
+.form__name::placeholder,
+.form__email::placeholder,
+.form__password::placeholder {
   color: #fff;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 16px;
+}
+
+.form__name,
+.form__email {
+  margin-right: 30px;
 }
 
 .btn--3 {
@@ -443,4 +450,138 @@ input {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
+}
+
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contacts__other {
+  margin-left: 35px;
+  margin-top: 35px;
+}
+
+.contacts__arrow {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.contacts__arrow::before {
+  content: url("/images/contacts/ARROW.png");
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.contacts__terms {
+  color: #a8aabc;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* =================
+      footer
+================== */
+
+.footer {
+  width: 100%;
+  min-height: 330px;
+  background: url("/images/footer/bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  width: 960px;
+  padding-top: 85px;
+}
+
+.inner__start {
+  width: 260px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.inner__support {
+  width: 165px;
+  font-weight: 500;
+  line-height: 2.3;
+}
+
+.inner__support__title {
+  font-size: 22px;
+  color: #000;
+}
+
+.inner__about {
+  width: 165px;
+  font-weight: 500;
+  line-height: 2.3;
+}
+
+.inner__about__title {
+  font-size: 22px;
+  color: #000;
+}
+
+.inner__newsletter {
+  width: 275px;
+  font-weight: 500;
+  line-height: 2.3;
+}
+
+.inner__newsletter__title {
+  font-size: 22px;
+  color: #000;
+}
+
+.inner__newsletter__subscribe {
+  display: flex;
+}
+
+.subscribe__email {
+  border: 1px solid #b8b8bf;
+  border-radius: 3px 0 0 3px;
+  height: 50px;
+  width: 215px;
+  padding-left: 30px;
+  outline: none;
+}
+
+.subscribe__email::placeholder {
+  content: "email";
+  color: #b8b8bf;
+  text-transform: uppercase;
+}
+
+.inner__newsletter__subscribe {
+  position: relative;
+}
+
+.btn--subscribe {
+  height: 50px;
+  position: absolute;
+  left: 213px;
+}
+
+.subscribe__img {
+  height: 50px;
+}
+
+.inner__newsletter__social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social__dribbble,
+.social__facebook,
+.social__googleplus,
+.social__twitter {
+  margin: 0 15px;
 }
